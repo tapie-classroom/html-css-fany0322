@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 20vw;
+    background-color: #111;
+    padding: 3vh 2vw;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100vh;
+  }
+  .logo {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5vh;
+    cursor: pointer;
+  }
+  .logo:hover{
+    color: #0c8ec6;
+  }
+  .play:hover{
+    color: #0c8ec6;
+  }
+  .buy:hover{
+    color: #0c8ec6;
+  }
+  .like:hover{
+    color: #0c8ec6;
+  }
+  .more:hover{
+    color: #0c8ec6;
+  }
+  .subscribe {
+    width: 100%;
+    padding: 2vh 0;
+    background-color: #0c8ec6;
+    color: white;
+    border: none;
+    font-size: 1.2vw;
+    margin-bottom: 4vh;
+    cursor: pointer;
+  }
+  
+  .menu li {
+    list-style: none;
+    font-size: 1.2vw;
+    margin-bottom: 3vh;
+  }
+  
+
+  .main {
+    flex: 1;
+    margin-left: 20vw; 
+    padding: 3vh 5vw;
+    box-sizing: border-box;
+  }
+  .top {
+    display: flex;
+    gap: 3vw;
+    margin-bottom: 5vh;
+  }
+  
+  .cover {
+    width: 22vw;
+    border-radius: 1.5vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .info h1 {
+    font-size: 3vw;
+    margin-bottom: 1.5vh;
+  }
+  
+  .info p {
+    font-size: 1.2vw;
+    margin: 0.5vh 0;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 2vw;
+    margin-top: 3vh;
+  }
+  
+  .buttons button {
+    padding: 1.2vh 2vw;
+    font-size: 1.1vw;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+  }
+  
+  .lyrics {
+    margin-top: 7vh;
+  }
+  
+  .lyrics h2 {
+    font-size: 2.5vw;
+    margin-bottom: 3vh;
+    font-weight: bold;
+  }
+  
+  .lyrics-text {
+    font-size: 1.3vw;
+    line-height: 1.8;
+    max-height: 10em;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: #bbb;
+    background-color: #222;
+    border-radius: 1vw;
+    padding: 2vh;
+  }
+  
+  .lyrics-text.expanded {
+    max-height: none;
+  }
+  
+  .show-more {
+    background: none;
+    color: #0c8ec6;
+    border: none;
+    font-size: 1.3vw;
+    cursor: pointer;
+    margin-top: 2vh;
+    font-weight: bold;
+  }
+  
+  .related-albums {
+    margin-top: 7vh;
+  }
+  
+  .related-albums h2 {
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+    font-weight: bold;
+    color: #0c8ec6;
+  }
+  
+  .album-scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 3vw;
+    margin-top: 2vh;
+  }
+  
+  .album-card {
+    text-align: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);  
+    border-radius: 1vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  
+  }
+  
+  .album-card img {
+    width: 100%;
+    border-radius: 1vw;
+    opacity: 0.7; 
+  }
+  
+  .album-card .title {
+    font-size: 1.4vw;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 1vh;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);  
+    padding: 0.5vh;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);  
+    border-radius: 0.5vw;
+  }
+  .album-card:hover{
+    transform:scale(1.0);  
+  }
+  
+  .album-card .artist {
+    color: #aaa;
+    font-size: 1.1vw;
+  }
+  
+  .album-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 1.5vw;
+  }
+  
+  .album-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .album-card .overlay p {
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: bold;
+  }
+  
